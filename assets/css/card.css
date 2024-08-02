@@ -1,0 +1,18 @@
+/* .card_logo{
+    padding: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    background-color: rgb(189, 2, 189) !important;
+}
+.card_logo:hover{
+    background-color: white;
+} */
+
+
+body, html {
+    height: 100%;
+}
+.bg-primary {
+    background-color: #761FE3;
+}

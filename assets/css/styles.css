@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+
 body {
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
     background: #000;
 }
 
@@ -11,7 +14,6 @@ body {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    overflow: hidden;
     /* z-index: 1000; */
 }
 
@@ -74,3 +76,111 @@ body {
     transform: translate(-50%, -50%);
     color: white;
 }
+
+
+
+/* service */
+
+
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  .service-body{
+    background-color: black;
+    font-family: 'Muli', sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center-aligns panels horizontally */
+    align-items: center; /* Center-aligns panels vertically */
+    width: 90vw;
+    gap: 10px;
+  }
+  
+  .panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: all 0.7s ease-in-out;
+  }
+  
+  .panel h3 {
+    font-size: 22px;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    white-space: nowrap;
+    /* Prevents text from wrapping */
+    overflow: hidden;
+    /* Hides overflowing text */
+    text-overflow: ellipsis;
+    /* Adds ellipsis if text overflows */
+    opacity: 1;
+    /* Always visible */
+    transition: transform 0.8s ease-in-out;
+    transform: rotate(-90deg);
+    /* Rotates text vertically */
+    transform-origin: left top;
+    /* Adjusts the origin of the transformation */
+  }
+  
+  .panel p {
+    position: absolute;
+    top: 50%;
+    /* Centers text vertically */
+    left: 20px;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .panel:hover {
+    flex: 5;
+  }
+  
+  .panel:hover h3,
+  .panel:hover p {
+    opacity: 1;
+    transform: rotate(0);
+    /* Resets rotation on hover */
+  }
+  
+  .panel.active {
+    flex: 5;
+  }
+  
+  .panel.active h3,
+  .panel.active p {
+    opacity: 1;
+    transform: rotate(0);
+    /* Resets rotation when card is expanded */
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      width: 100vw;
+      flex-direction: column;
+    }
+  
+    /* .panel:nth-of-type(4),
+    .panel:nth-of-type(4) {
+      display: none;
+    } */
+  }
