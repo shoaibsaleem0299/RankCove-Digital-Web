@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <script src="https://kit.fontawesome.com/7379bf4ae1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/vendor/aos/dist/aos.css">
+    <script src="../../assets/vendor/aos/dist/aos.js"></script>
+    <style>
+        .mobile-menu {
+            display: none;
+        }
+        .mobile-menu.open {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <header style="position: absolute; top: 0;" class="z-10 w-full bg-transparent relative">
+        <nav class="flex items-center justify-between p-4 lg:p-8" aria-label="Global">
+            <div class="flex lg:flex-1">
+                <a href="index.html" class="-m-1.5 p-1.5">
+                    <img class="h-14 w-auto" src="../images/logo.png" alt="RANKCOVE">
+                </a>
+            </div>
+            <div class="flex lg:hidden">
+                <button id="mobile-menu-button" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden lg:flex lg:gap-x-12 backdrop-blur-md bg-white bg-opacity-10 p-4 rounded-lg">
+                <a href="../../index.html" class="text-sm font-semibold leading-6 text-white">Home</a>
+                <a href="./assets/pages/about_us.html" class="text-sm font-semibold leading-6 text-white">About</a>
+                <div class="relative">
+                    <button class="text-sm font-semibold leading-6 text-white flex items-center" id="services-menu-button">
+                        Services
+                        <svg class="ml-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="services-menu" class="absolute right-0 hidden mt-2 w-48 origin-top-right bg-white bg-opacity-50 backdrop-blur-md text-black shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Web Development</a>
+                        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">SEO Services</a>
+                        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Mobile App Development</a>
+                        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Digital Marketing</a>
+                    </div>
+                </div>
+                <a href="#" class="text-sm font-semibold leading-6 text-white">Our Work</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-white">Blog</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-white">Clients</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-white">Contact Us</a>
+            </div>
+            <div class="hidden lg:flex lg:flex-1 lg:justify-end space-x-2">
+                <a href="#!" role="button">
+                    <i class="w-10 fa-brands fa-facebook-f fa-xl text-white"></i>
+                </a>
+                <a href="#!" role="button">
+                    <i class="w-10 fa-brands fa-instagram fa-xl text-white"></i>
+                </a>
+                <a href="#!" role="button">
+                    <i class="w-10 fa-brands fa-x-twitter fa-xl text-white"></i>
+                </a>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 z-50 w-full bg-white shadow-lg">
+            <nav class="flex flex-col p-4">
+                <div class="flex items-center justify-between">
+                    <a href="#" class="-m-1.5 p-1.5">
+                      <span class="sr-only">Your Company</span>
+                      <img class="h-8 w-auto" src="../images/logo.png" alt="">
+                    </a>
+                    <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                      <span class="sr-only">Close menu</span>
+                      <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
+                  </div>
+                <a href="../../index.html" class="text-sm font-semibold leading-6 text-black py-2">Home</a>
+                <a href="./assets/pages/about_us.html" class="text-sm font-semibold leading-6 text-black py-2">About</a>
+                <button class="text-sm font-semibold leading-6 text-black py-2" id="services-menu-button-mobile">
+                    Services
+                    <svg class="ml-2 h-5 w-5 text-black inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div id="services-menu-mobile" class="hidden mt-2 w-full bg-gray-100 text-black">
+                    <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-200">Web Development</a>
+                    <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-200">SEO Services</a>
+                    <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-200">Mobile App Development</a>
+                    <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-200">Digital Marketing</a>
+                </div>
+                <a href="#" class="text-sm font-semibold leading-6 text-black py-2">Our Work</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-black py-2">Blog</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-black py-2">Clients</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-black py-2">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+
+        <video style="height: 50vh; width: 100%;" autoplay muted loop>
+            <source src="../video/video.mp4" type="video/mp4">
+        </video>
+   
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('open');
+        });
+
+        document.getElementById('services-menu-button-mobile').addEventListener('click', function () {
+            document.getElementById('services-menu-mobile').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
