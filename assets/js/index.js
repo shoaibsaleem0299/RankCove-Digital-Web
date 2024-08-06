@@ -29,6 +29,43 @@
 // }
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    const animateNumber = (element, duration) => {
+        const start = 0; // Start from 0 for animation
+        const end = parseInt(element.getAttribute('data-number').replace(/,/g, ''), 10);
+        const stepTime = Math.abs(Math.floor(duration / end));
+        let current = start;
+
+        const step = () => {
+            current += 1;
+            element.textContent = current.toLocaleString();
+            if (current < end) {
+                setTimeout(step, stepTime);
+            } else {
+                element.textContent = end.toLocaleString(); // Ensure the final value is correct
+            }
+        };
+
+        step();
+    };
+
+    // Animate each number
+    document.querySelectorAll('.funfact-number').forEach(el => {
+        animateNumber(el, 2000); // Duration in milliseconds
+    });
+});
+
+
+
+
+  $(document).on('ready', function () {
+    // initialization of aos
+    AOS.init({
+      duration: 650,
+      once: true
+    });
+  });
+
 
 document.getElementById('services-menu-button').addEventListener('click', function () {
   const menu = document.getElementById('services-menu');
@@ -62,3 +99,5 @@ function removeActiveClasses() {
     panel.classList.remove('active');
   });
 }
+
+
