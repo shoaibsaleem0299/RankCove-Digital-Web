@@ -36,7 +36,7 @@
   .funfact-number {
     font-size: 60px;
     font-weight: bold;
-    color: #fff; /* Number color */
+    color: #ffd; /* Number color */
   }
   
   .funfact-number sup {
@@ -47,7 +47,7 @@
   .funfact-number-title {
     font-weight: bold;
     font-size: 18px;
-    color: #fff; /* Title color */
+    color: #ffd; /* Title color */
     margin: 5px 0;
   }
   
@@ -254,6 +254,5 @@ body {
       display: none;
     } */
   }
-
 
 
